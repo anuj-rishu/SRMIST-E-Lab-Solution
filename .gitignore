@@ -2,3 +2,5 @@ courseinfo.json
 getquestion.json
 .DS_Store
 *.txt
+server.js
+solution.c
