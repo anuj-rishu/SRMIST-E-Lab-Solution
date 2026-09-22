@@ -7,3 +7,4 @@ batch_eval.json
 solution.c
 solution
 test_*
+scan_results.json
