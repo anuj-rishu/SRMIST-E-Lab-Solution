@@ -8,3 +8,5 @@ solution.c
 solution
 test_*
 scan_results.json
+scan_*.json
+a.out
