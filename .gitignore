@@ -1,6 +1,9 @@
 courseinfo.json
 getquestion.json
+batch_eval.json
 .DS_Store
 *.txt
-server.js
+*.js
 solution.c
+solution
+test_*
