@@ -12,3 +12,5 @@ batch_eval_*.json
 scratch/
 scan_*.json
 a.out
+e-lab/
+package.json
