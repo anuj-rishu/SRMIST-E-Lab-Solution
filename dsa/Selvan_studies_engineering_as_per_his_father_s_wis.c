@@ -1,29 +1,33 @@
-void dummy(){}
 #include <stdio.h>
 
-void printArray(int arr[],int n) {
-    for (int i = 0; i < n; i++) printf("%d ", arr[i]);
+void swap(int *xp,int *yp) {
+    int t = *xp; *xp = *yp; *yp = t;
+}
+
+void printArray(int arr[],int size) {
+    for (int i = 0; i < size; i++) printf("%d ", arr[i]);
     printf("\n");
 }
 
-void insertionSort(int arr[],int n) {
-    for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = key;
-        if (i == 2) printArray(arr, n);
-    }
+void step(int arr[], int j) {
+    if (arr[j] > arr[j + 1]) swap(&arr[j], &arr[j + 1]);
+}
+
+void pass(int arr[], int n) {
+    for (int j = 0; j < n - 1; j++) step(arr, j);
+}
+
+void bubbleSort(int arr[],int n) {
+    for (int i = 0; i < 3; i++) pass(arr, n - i);
+    printArray(arr, n);
+    for (int i = 3; i < n - 1; i++) pass(arr, n - i);
 }
 
 int main() {
-    int n, arr[1005];
-    if (scanf("%d", &n) != 1) return 0;
-    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
-    insertionSort(arr, n);
-    printArray(arr, n);
+    int n, a[1005];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) scanf("%d", a + i);
+    bubbleSort(a, n);
+    printArray(a, n);
     return 0;
 }

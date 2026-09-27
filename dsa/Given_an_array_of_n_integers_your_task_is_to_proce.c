@@ -1,17 +1,38 @@
 #include <stdio.h>
-long long pref[200005];
+
+void dummy() {}
+
+#define N 200005
+long long bit[N], a[N];
+int n;
+
+void upd(int i, long long v) {
+    for (; i <= n; i += i & -i) bit[i] += v;
+}
+
+long long qry(int i) {
+    long long s = 0;
+    for (; i > 0; i -= i & -i) s += bit[i];
+    return s;
+}
+
 int main() {
-    int n, q, i;
-    if (scanf("%d %d", &n, &q) != 2) return 0;
-    for(i=0;i<n;i++) {
-        long long x;
-        scanf("%lld", &x);
-        pref[i + 1] = pref[i] + x;
+    int q;
+    if (scanf("%d%d", &n, &q) != 2) return 0;
+    for (int i = 1; i <= n; i++) {
+        scanf("%lld", &a[i]);
+        upd(i, a[i]);
     }
-    while (q--) {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        printf("%lld\n", pref[b] - pref[a - 1]);
+    while(q--) {
+        int t;
+        long long x, y;
+        scanf("%d%lld%lld", &t, &x, &y);
+        if (t == 1) {
+            upd(x, y - a[x]);
+            a[x] = y;
+        } else {
+            printf("%lld\n", qry(y) - qry(x - 1));
+        }
     }
     return 0;
 }
