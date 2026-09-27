@@ -21,16 +21,6 @@ Comprehensive, verified, and test-case passing solution repository for **SRMIST 
 
 ---
 
-## 📚 Course Tracks & Repository Structure
-
-| Track | Course Code | Directory | Solutions Count | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **C Programming** | `21CSC101J` / `18CSC101J` | [`c_programming/`](c_programming/) | **220** | Verified (100%) |
-| **Data Structures & Algorithms** | `21CSC201J` / `18CSC201J` | [`dsa/`](dsa/) | **85** | Verified (100%) |
-| **Total Verified** | — | — | **305** | Complete |
-
----
-
 ## 📂 Index of Solutions
 
 ### 💻 C Programming Solutions (220 Questions)
