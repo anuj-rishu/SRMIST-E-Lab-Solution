@@ -1,15 +1,23 @@
 #include <stdio.h>
 
-void dummy() {}
+void dummy() {
+}
 
 int a[30000] = {1}, b[30000] = {4}, c[30000];
 int la = 1, lb = 1, lc;
 
 int main() {
     int n;
-    if (scanf("%d", &n) != 1) return 0;
-    if (n == 1) { printf("1\n"); return 0; }
-    if (n == 2) { printf("4\n"); return 0; }
+    if (scanf("%d", &n) != 1)
+        return 0;
+    if (n == 1) {
+        printf("1\n");
+        return 0;
+    }
+    if (n == 2) {
+        printf("4\n");
+        return 0;
+    }
     for (int k = 3; k <= n; k++) {
         int carry = 0;
         lc = lb;
@@ -23,16 +31,20 @@ int main() {
                 cur %= 10;
             }
             c[i] = cur;
-            if (i >= lc && cur) lc = i + 1;
+            if (i >= lc && cur)
+                lc = i + 1;
         }
-        for (int i = 0; i < lb; i++) a[i] = b[i]; 
+        for (int i = 0; i < lb; i++)
+            a[i] = b[i];
         la = lb;
-        for (int i = 0; i < lc; i++) b[i] = c[i]; 
+        for (int i = 0; i < lc; i++)
+            b[i] = c[i];
         lb = lc;
     }
     for (int i = lb - 1; i >= 0; i--) {
         printf("%d", b[i]);
-        if (i == 0) break;
+        if (i == 0)
+            break;
     }
     printf("\n");
     return 0;

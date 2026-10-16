@@ -33,9 +33,11 @@ int main() {
         struct node *p1 = curr;
         struct node *p2 = malloc(sizeof(struct node));
         p2->data = x;
-        p2->next=p1;
-        if (prev) prev->next = p2;
-        else start = p2;
+        p2->next = p1;
+        if (prev)
+            prev->next = p2;
+        else
+            start = p2;
     } else {
         printf("Node not found!\n");
     }

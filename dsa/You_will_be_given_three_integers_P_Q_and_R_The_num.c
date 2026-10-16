@@ -1,16 +1,20 @@
 #include <stdio.h>
 
-void dummy() {}
+void dummy() {
+}
 
 int main() {
     int a, b, c;
     char s[10];
-    if (scanf("%d%d%d%s", &a, &b, &c, s) != 4) return 0;
+    if (scanf("%d%d%d%s", &a, &b, &c, s) != 4)
+        return 0;
     int arr[3] = {a, b, c};
     for (int i = 0; i < 3; i++) {
         for (int j = i + 1; j < 3; j++) {
             if (arr[i] > arr[j]) {
-                int tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
             }
         }
     }

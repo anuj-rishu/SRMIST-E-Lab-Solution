@@ -1,33 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void dummy(){}
+void dummy() {
+}
 
-double solve(double** arr,double K,int n){
+double solve(double **arr, double K, int n) {
     double low = -1e9;
-    for(int i = 0; i < n; i++){
-        if(-arr[i][1] > low) low = -arr[i][1];
+    for (int i = 0; i < n; i++) {
+        if (-arr[i][1] > low)
+            low = -arr[i][1];
     }
     low += 1e-9;
     double high = 1e9;
-    for(int iter = 0; iter < 100; iter++){
+    for (int iter = 0; iter < 100; iter++) {
         double mid = (low + high) / 2.0;
         double sum = 0;
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             sum += arr[i][0] / (arr[i][1] + mid);
         }
-        if(sum > K) low = mid;
-        else high = mid;
+        if (sum > K)
+            low = mid;
+        else
+            high = mid;
     }
     return (low + high) / 2.0;
 }
 
-int main(){
+int main() {
     int n, col;
-    if(scanf("%d%d", &n, &col) != 2) return 0;
+    if (scanf("%d%d", &n, &col) != 2)
+        return 0;
     double data[1005][2];
-    double* arr[1005];
-    for(int i = 0; i < n; i++){
+    double *arr[1005];
+    for (int i = 0; i < n; i++) {
         scanf("%lf%lf", &data[i][0], &data[i][1]);
         arr[i] = data[i];
     }

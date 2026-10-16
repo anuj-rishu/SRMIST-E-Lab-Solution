@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-void dummy() {}
+void dummy() {
+}
 
 char g[1005][1005];
 int comp[1005][1005];
@@ -10,7 +11,8 @@ int dy[] = {0, 0, -1, 1};
 
 int main() {
     int r, c, n;
-    if (scanf("%d%d", &r, &c) != 2) return 0;
+    if (scanf("%d%d", &r, &c) != 2)
+        return 0;
     for (int i = 0; i < r; i++) {
         scanf("%s", g[i]);
     }
@@ -38,14 +40,20 @@ int main() {
             }
         }
     }
-    if (scanf("%d", &n) != 1) return 0;
+    if (scanf("%d", &n) != 1)
+        return 0;
     for (int i = 0; i < n; i++) {
         int r1, c1, r2, c2;
         scanf("%d%d%d%d", &r1, &c1, &r2, &c2);
-        r1--; c1--; r2--; c2--;
+        r1--;
+        c1--;
+        r2--;
+        c2--;
         if (comp[r1][c1] == comp[r2][c2]) {
-            if (g[r1][c1] == '1') puts("decimal");
-            else puts("binary");
+            if (g[r1][c1] == '1')
+                puts("decimal");
+            else
+                puts("binary");
         } else {
             puts("neither");
         }

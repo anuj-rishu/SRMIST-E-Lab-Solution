@@ -4,10 +4,12 @@ int a[1000][1000];
 
 int main() {
     int t;
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     while (t--) {
         int n;
-        if (scanf("%d", &n) != 1) break;
+        if (scanf("%d", &n) != 1)
+            break;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 scanf("%d", &a[i][j]);
@@ -15,7 +17,8 @@ int main() {
         }
         int c = 0;
         for (int i = 1; i < n; i++) {
-            if (a[c][i] == 1) c = i;
+            if (a[c][i] == 1)
+                c = i;
         }
         int ok = 1;
         for (int i = 0; i < n; i++) {
@@ -26,8 +29,10 @@ int main() {
                 }
             }
         }
-        if (ok) printf("%d\n", c + 1);
-        else printf("-1\n");
+        if (ok)
+            printf("%d\n", c + 1);
+        else
+            printf("-1\n");
     }
     return 0;
 }

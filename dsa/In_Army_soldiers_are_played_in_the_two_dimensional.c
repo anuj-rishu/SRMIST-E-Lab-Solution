@@ -4,15 +4,17 @@
 int X[1005], Y[1005];
 
 int cmp(const void *a, const void *b) {
-    return *(int*)a - *(int*)b;
+    return *(int *)a - *(int *)b;
 }
 
 int main() {
     int t;
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     while (t--) {
         int s;
-        if (scanf("%d", &s) != 1) break;
+        if (scanf("%d", &s) != 1)
+            break;
         for (int i = 0; i < s; i++) {
             scanf("%d %d", &X[i], &Y[i]);
         }

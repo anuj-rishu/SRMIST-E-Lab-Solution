@@ -1,19 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct node { int data; struct node *next; } *start;
+
+typedef struct node {
+    int data;
+    struct node *next;
+} node;
+
+node *start;
+
 void display() {
+    node *p2 = start;
     printf("Linked List:");
-    for (struct node *c = start; c; c = c->next) printf("->%d", c->data);
+    while (p2) {
+        printf("->%d", p2->data);
+        p2 = p2->next;
+    }
 }
+
 int main() {
-    int n, x;
-    if (scanf("%d", &n) != 1) return 0;
+    int n;
+    scanf("%d", &n);
+    node **p = &start;
     while (n--) {
-        scanf("%d", &x);
-        struct node *p1 = malloc(sizeof(struct node));
-        p1->data = x;
-        p1->next=start;
-        start = p1;
+        *p = calloc(1, sizeof(node));
+        scanf("%d", &(*p)->data);
+        p = &(*p)->next;
     }
     display();
     return 0;

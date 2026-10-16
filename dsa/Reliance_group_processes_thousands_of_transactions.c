@@ -6,7 +6,8 @@ int fun(int mid) {
 
 int main() {
     int n;
-    if (scanf("%d", &n) != 1) return 0;
+    if (scanf("%d", &n) != 1)
+        return 0;
     long long pref[100005];
     pref[0] = 0;
     for (int i = 1; i <= n; i++) {
@@ -15,7 +16,8 @@ int main() {
         pref[i] = pref[i - 1] + val;
     }
     int q;
-    if (scanf("%d", &q) != 1) return 0;
+    if (scanf("%d", &q) != 1)
+        return 0;
     long long last = -1;
     while (q--) {
         long long target;

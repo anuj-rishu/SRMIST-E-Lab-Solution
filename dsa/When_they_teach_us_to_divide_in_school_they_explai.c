@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void dummy() {}
+void dummy() {
+}
 
 int main() {
     int t;
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     while (t--) {
         int a, b;
         scanf("%d%d", &a, &b);

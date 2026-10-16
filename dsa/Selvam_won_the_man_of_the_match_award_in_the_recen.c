@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int minOperatins(int arr[],int n) {
+int minOperatins(int arr[], int n) {
     int ans = 0;
     int i = 0, j = n - 1;
     while (i <= j) {
-        if(arr[i]==arr[j]) {
+        if (arr[i] == arr[j]) {
             i++;
             j--;
         } else if (arr[i] > arr[j]) {
@@ -22,8 +22,10 @@ int minOperatins(int arr[],int n) {
 
 int main() {
     int n, arr[105];
-    if (scanf("%d", &n) != 1) return 0;
-    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+    if (scanf("%d", &n) != 1)
+        return 0;
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
     int ans = minOperatins(arr, n);
     if (ans == 0) {
         printf("array is already a palindrome\n");

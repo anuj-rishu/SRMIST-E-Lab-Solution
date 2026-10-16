@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-void solve_dummy() {}
+void solve_dummy() {
+}
 
 int main() {
     int t;
-    if (scanf("%d", &t) != 1) return 0;
-    while(t--) {
+    if (scanf("%d", &t) != 1)
+        return 0;
+    while (t--) {
         long long a, b, c, k;
-        if (scanf("%lld %lld %lld %lld", &a, &b, &c, &k) != 4) break;
+        if (scanf("%lld %lld %lld %lld", &a, &b, &c, &k) != 4)
+            break;
         if (c >= k) {
             printf("0\n");
             continue;

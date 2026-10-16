@@ -16,7 +16,7 @@ int main() {
     scanf("%d%lld", &n, &h);
     read_input(n);
     long long lo = 1, hi = 2000000000LL, ans = hi;
-    while(hi>=lo) {
+    while (hi >= lo) {
         long long mid = lo + (hi - lo) / 2;
         long long cur = (mid / n) * pref[n] + pref[mid % n];
         if (cur + mid * (mid + 1) / 2 >= h) {

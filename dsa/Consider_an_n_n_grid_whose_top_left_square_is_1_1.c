@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void dummy() {}
+void dummy() {
+}
 
 #define MOD 1000000007
 
-int compare(const void *a,const void *b) {
+int compare(const void *a, const void *b) {
     const int *p = a, *q = b;
-    if (p[0] != q[0]) return p[0] - q[0];
+    if (p[0] != q[0])
+        return p[0] - q[0];
     return p[1] - q[1];
 }
 
@@ -16,12 +18,14 @@ long long fact[2000005], inv[2000005];
 long long pw(long long b, long long p) {
     long long r = 1;
     for (; p; p /= 2, b = b * b % MOD)
-        if (p & 1) r = r * b % MOD;
+        if (p & 1)
+            r = r * b % MOD;
     return r;
 }
 
 long long C(int n, int r) {
-    if (r < 0 || r > n) return 0;
+    if (r < 0 || r > n)
+        return 0;
     return fact[n] * inv[r] % MOD * inv[n - r] % MOD;
 }
 
@@ -30,14 +34,18 @@ long long dp[1005];
 
 int main() {
     fact[0] = inv[0] = 1;
-    for (int i = 1; i <= 2000000; i++) fact[i] = fact[i - 1] * i % MOD;
+    for (int i = 1; i <= 2000000; i++)
+        fact[i] = fact[i - 1] * i % MOD;
     inv[2000000] = pw(fact[2000000], MOD - 2);
-    for (int i = 1999999; i >= 1; i--) inv[i] = inv[i + 1] * (i + 1) % MOD;
+    for (int i = 1999999; i >= 1; i--)
+        inv[i] = inv[i + 1] * (i + 1) % MOD;
 
     int n, m, k = 0;
-    if (scanf("%d%d", &n, &m) != 2) return 0;
+    if (scanf("%d%d", &n, &m) != 2)
+        return 0;
     for (int i = 0; i < m; i++)
-        if (scanf("%d%d", &traps[k][0], &traps[k][1]) == 2) k++;
+        if (scanf("%d%d", &traps[k][0], &traps[k][1]) == 2)
+            k++;
     traps[k][0] = traps[k][1] = n;
     qsort(traps, k, sizeof(traps[0]), compare);
 

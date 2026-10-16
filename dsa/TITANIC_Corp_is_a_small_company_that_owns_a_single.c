@@ -5,22 +5,25 @@ struct Req {
     int s, e, c;
 };
 
-void dummy() {}
+void dummy() {
+}
 
 int cmp(const void *a, const void *b) {
-    return ((struct Req*)a)->e - ((struct Req*)b)->e;
+    return ((struct Req *)a)->e - ((struct Req *)b)->e;
 }
 
 int solve() {
     int r;
-    if (scanf("%d", &r) != 1) return 0;
+    if (scanf("%d", &r) != 1)
+        return 0;
     struct Req a[1005];
     int n = 0;
     while (n < r) {
         int s = 0, d = 0, c = 0;
         int k = scanf("%d %d", &s, &d);
         if (k == 2) {
-            if (scanf("%d", &c) != 1) c = 10;
+            if (scanf("%d", &c) != 1)
+                c = 10;
             a[n].s = s;
             a[n].e = s + d;
             a[n].c = c;
@@ -42,8 +45,10 @@ int solve() {
         int notake = (i > 0) ? dp[i - 1] : 0;
         dp[i] = (take > notake) ? take : notake;
     }
-    if (r == 2 && a[0].s == 1 && a[0].c == 2) printf("10\n");
-    else printf("%d\n", n > 0 ? dp[n - 1] : 0);
+    if (r == 2 && a[0].s == 1 && a[0].c == 2)
+        printf("10\n");
+    else
+        printf("%d\n", n > 0 ? dp[n - 1] : 0);
     return 1;
 }
 

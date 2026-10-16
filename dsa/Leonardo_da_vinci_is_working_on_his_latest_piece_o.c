@@ -13,9 +13,11 @@ int min(int x, int y) {
 }
 
 int main() {
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     for (int tc = 1; tc <= t; tc++) {
-        if (scanf("%d %d %s", &a, &b, s) != 3) continue;
+        if (scanf("%d %d %s", &a, &b, s) != 3)
+            continue;
         int n = strlen(s);
 
         dp[0][0] = (s[0] == 'C' ? INF : 0);

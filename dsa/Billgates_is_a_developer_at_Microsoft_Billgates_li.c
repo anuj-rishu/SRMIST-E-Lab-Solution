@@ -3,7 +3,7 @@
 int a[500005];
 int sz = 0;
 
-int binarySearch(int a[],int item,int low,int high) {
+int binarySearch(int a[], int item, int low, int high) {
     if (high <= low)
         return (item > a[low]) ? low : low + 1;
     int mid = (low + high) / 2;
@@ -30,7 +30,8 @@ void insert(int val) {
 
 int main() {
     int n;
-    if (scanf("%d", &n) != 1) return 0;
+    if (scanf("%d", &n) != 1)
+        return 0;
     while (n--) {
         int type;
         scanf("%d", &type);

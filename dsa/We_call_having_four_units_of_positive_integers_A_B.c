@@ -4,12 +4,14 @@
 
 using namespace std;
 
-void dummy() {}
+void dummy() {
+}
 
 int main() {
     string s;
     int a[4];
-    if (!(cin >> a[0] >> a[1] >> a[2] >> a[3])) return 0;
+    if (!(cin >> a[0] >> a[1] >> a[2] >> a[3]))
+        return 0;
     sort(a, a + 4);
     static int cnt[4096];
     long long tot = 0, res = 0;

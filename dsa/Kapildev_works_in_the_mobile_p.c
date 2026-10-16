@@ -23,8 +23,10 @@ void printList(struct node *node) {
 
 void swapNodes(struct node **head_ref, int x, int y) {
     struct node *currX = *head_ref, *currY = *head_ref;
-    while (currX && currX->data != x) currX = currX->next;
-    while (currY && currY->data != y) currY = currY->next;
+    while (currX && currX->data != x)
+        currX = currX->next;
+    while (currY && currY->data != y)
+        currY = currY->next;
     if (currX && currY) {
         int temp = currX->data;
         currX->data = currY->data;
@@ -35,21 +37,21 @@ void swapNodes(struct node **head_ref, int x, int y) {
 int main() {
     int n, i, val, x, y;
     struct node *head = NULL;
-    
+
     scanf("%d", &n);
     for (i = 0; i < n; i++) {
         scanf("%d", &val);
         push(&head, val);
     }
     scanf("%d %d", &x, &y);
-    
+
     printf("before Swapping:");
     printList(head);
-    
+
     swapNodes(&head, x, y);
-    
+
     printf("after Swapping:");
     printList(head);
-    
+
     return 0;
 }

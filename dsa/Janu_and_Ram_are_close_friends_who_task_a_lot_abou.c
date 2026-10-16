@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-void zeroesIndexes(int arr[],int zeroes,int n) {
+void zeroesIndexes(int arr[], int zeroes, int n) {
     int wL = 0, wR = 0, bestL = 0, bestWindow = 0, zeroCount = 0;
     while (wR < n) {
-        if (arr[wR] == 0) zeroCount++;
+        if (arr[wR] == 0)
+            zeroCount++;
         while (zeroCount > zeroes) {
-            if (arr[wL] == 0) zeroCount--;
+            if (arr[wL] == 0)
+                zeroCount--;
             wL++;
         }
         if (wR - wL + 1 > bestWindow) {
@@ -28,7 +30,8 @@ int main() {
     int arr[100];
     int n, zeroes;
     scanf("%d", &n);
-    for (int i = 0; i < n; i++) scanf("%d", arr + i);
+    for (int i = 0; i < n; i++)
+        scanf("%d", arr + i);
     scanf("%d", &zeroes);
     zeroesIndexes(arr, zeroes, n);
     return 0;

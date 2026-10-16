@@ -19,32 +19,34 @@ void printMiddle(struct node *head) {
 
     while (fast_ptr) {
         fast_ptr = fast_ptr->next;
-        if (!fast_ptr) break;
+        if (!fast_ptr)
+            break;
         fast_ptr = fast_ptr->next;
         slow_ptr = slow_ptr->next;
     }
-    if (slow_ptr) printf("The middle element is [%d]\n", slow_ptr->data);
+    if (slow_ptr)
+        printf("The middle element is [%d]\n", slow_ptr->data);
 }
 
 int main() {
     int n, i, val;
     struct node *head = NULL;
-    
+
     scanf("%d", &n);
     for (i = 0; i < n; i++) {
         scanf("%d", &val);
         push(&head, val);
     }
-    
+
     printf("Linked list:");
     struct node *temp = head;
-    while(temp) {
+    while (temp) {
         printf("-->%d", temp->data);
         temp = temp->next;
     }
     printf("\n");
-    
+
     printMiddle(head);
-    
+
     return 0;
 }

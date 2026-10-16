@@ -6,7 +6,7 @@ char s[100005];
 void build(int m) {
     int j;
     pref[0] = 0;
-    for(j = 0; j < m; j++) {
+    for (j = 0; j < m; j++) {
         pref[j + 1] = pref[j] ^ (1 << (s[j] - 'A'));
     }
 }

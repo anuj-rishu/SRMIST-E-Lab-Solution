@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-void dummy() {}
+void dummy() {
+}
 
 int main() {
     int t, i = 1;
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     while (i <= t) {
         int targetP, targetC, targetF, n;
-        if (scanf("%d%d%d", &targetP, &targetC, &targetF) != 3) break;
-        if (scanf("%d", &n) != 1) break;
+        if (scanf("%d%d%d", &targetP, &targetC, &targetF) != 3)
+            break;
+        if (scanf("%d", &n) != 1)
+            break;
         int p[25], c[25], f[25];
         int m = n, k = 0;
         while (n--) {

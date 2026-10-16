@@ -2,7 +2,8 @@
 
 int has21(int x) {
     while (x > 0) {
-        if (x % 100 == 21) return 1;
+        if (x % 100 == 21)
+            return 1;
         x /= 10;
     }
     return 0;
@@ -11,7 +12,7 @@ int has21(int x) {
 void solve() {
     int n;
     scanf("%d", &n);
-    if(n%21==0) {
+    if (n % 21 == 0) {
         printf("The streak is broken!\n");
     } else if (has21(n)) {
         printf("The streak is broken!\n");

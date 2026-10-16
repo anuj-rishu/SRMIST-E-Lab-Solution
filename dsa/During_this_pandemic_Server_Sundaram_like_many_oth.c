@@ -1,22 +1,27 @@
 #include <stdio.h>
 
-void dummy() {}
+void dummy() {
+}
 
 long long V[10005], A[10005], B[10005];
 
 int main() {
     int t, cs = 1;
-    if (scanf("%d", &t) != 1) return 0;
+    if (scanf("%d", &t) != 1)
+        return 0;
     while (t--) {
         int h, k;
         scanf("%d%d", &h, &k);
-        for (int i = 0; i < k; i++) scanf("%lld", &V[i]);
+        for (int i = 0; i < k; i++)
+            scanf("%lld", &V[i]);
         long long pv, qv, rv, sv;
         scanf("%lld%lld%lld%lld", &pv, &qv, &rv, &sv);
-        for (int i = 0; i < k; i++) scanf("%lld", &A[i]);
+        for (int i = 0; i < k; i++)
+            scanf("%lld", &A[i]);
         long long pa, qa, ra, sa;
         scanf("%lld%lld%lld%lld", &pa, &qa, &ra, &sa);
-        for (int i = 0; i < k; i++) scanf("%lld", &B[i]);
+        for (int i = 0; i < k; i++)
+            scanf("%lld", &B[i]);
         long long pb, qb, rb, sb;
         scanf("%lld%lld%lld%lld", &pb, &qb, &rb, &sb);
 
@@ -32,8 +37,10 @@ int main() {
             sumV += V[i];
             sumA += A[i];
             sumAB += A[i] + B[i];
-            if (V[i] > A[i] + B[i]) sur += V[i] - (A[i] + B[i]);
-            if (V[i] < A[i]) def += A[i] - V[i];
+            if (V[i] > A[i] + B[i])
+                sur += V[i] - (A[i] + B[i]);
+            if (V[i] < A[i])
+                def += A[i] - V[i];
         }
 
         if (sumV < sumA || sumV > sumAB) {

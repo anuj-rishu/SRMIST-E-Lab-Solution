@@ -10,7 +10,7 @@ int cmp(const void *p1, const void *p2) {
 
 int check(int mid) {
     int i = 0, j = 0, count = 0;
-    while(i<n&&j<n) {
+    while (i < n && j < n) {
         if (a[j] - a[i] <= 2 * mid) {
             j++;
         } else {
@@ -18,13 +18,16 @@ int check(int mid) {
             i = j;
         }
     }
-    if (i < n) count++;
+    if (i < n)
+        count++;
     return count <= k;
 }
 
 int main() {
-    if (scanf("%d%d", &n, &k) != 2) return 0;
-    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+    if (scanf("%d%d", &n, &k) != 2)
+        return 0;
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
     qsort(a, n, sizeof(int), cmp);
 
     int lo = 0, hi = 1000000000, ans = hi;

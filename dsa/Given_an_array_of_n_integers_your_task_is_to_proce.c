@@ -1,38 +1,38 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+int t[800005];
 
-void dummy() {}
-
-#define N 200005
-long long bit[N], a[N];
-int n;
-
-void upd(int i, long long v) {
-    for (; i <= n; i += i & -i) bit[i] += v;
+void build(int *aa, int k, int l, int r) {
+    if (l == r) {
+        t[k] = aa[l];
+        return;
+    }
+    int m = (l + r) / 2;
+    build(aa, k * 2, l, m);
+    build(aa, k * 2 + 1, m + 1, r);
+    t[k] = min(t[k * 2], t[k * 2 + 1]);
 }
 
-long long qry(int i) {
-    long long s = 0;
-    for (; i > 0; i -= i & -i) s += bit[i];
-    return s;
+int query(int k, int l, int r, int ql, int qr) {
+    if (ql <= l && r <= qr)
+        return t[k];
+    int m = (l + r) / 2, v = INT_MAX;
+    if (ql <= m)
+        v = query(k * 2, l, m, ql, qr);
+    if (qr > m)
+        v = min(v, query(k * 2 + 1, m + 1, r, ql, qr));
+    return v;
 }
 
 int main() {
-    int q;
-    if (scanf("%d%d", &n, &q) != 2) return 0;
-    for (int i = 1; i <= n; i++) {
-        scanf("%lld", &a[i]);
-        upd(i, a[i]);
+    int n, q, x, y;
+    cin >> n >> q;
+    vector<int> a(n + 1);
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    build(a.data(), 1, 1, n);
+    while (q--) {
+        cin >> x >> y;
+        cout << query(1, 1, n, x, y) << '\n';
     }
-    while(q--) {
-        int t;
-        long long x, y;
-        scanf("%d%lld%lld", &t, &x, &y);
-        if (t == 1) {
-            upd(x, y - a[x]);
-            a[x] = y;
-        } else {
-            printf("%lld\n", qry(y) - qry(x - 1));
-        }
-    }
-    return 0;
 }

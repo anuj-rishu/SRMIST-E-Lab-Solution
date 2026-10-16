@@ -32,7 +32,7 @@ int main() {
         struct node *p1 = curr->next;
         struct node *p2 = malloc(sizeof(struct node));
         p2->data = x;
-        p2->next=p1;
+        p2->next = p1;
         curr->next = p2;
     } else {
         printf("Node not found! ");

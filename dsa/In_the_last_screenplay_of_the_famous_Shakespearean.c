@@ -41,14 +41,17 @@ void bfs(int sR, int sC, int dist[105][105]) {
 }
 
 int main() {
-    if (scanf("%d %d", &N, &M) != 2) return 0;
+    if (scanf("%d %d", &N, &M) != 2)
+        return 0;
     int ch;
-    while ((ch = getchar()) != '\n' && ch != EOF);
+    while ((ch = getchar()) != '\n' && ch != EOF)
+        ;
 
     int rR = -1, cR = -1, rJ = -1, cJ = -1;
     for (int i = 0; i < N; i++) {
         char line[205];
-        if (!fgets(line, sizeof(line), stdin)) break;
+        if (!fgets(line, sizeof(line), stdin))
+            break;
         int len = strlen(line);
         while (len > 0 && (line[len - 1] == '\n' || line[len - 1] == '\r')) {
             line[--len] = '\0';

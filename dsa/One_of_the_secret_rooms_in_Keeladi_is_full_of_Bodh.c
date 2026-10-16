@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 int max2(int a, int b) {
-    if (a > b) return a;
-    else return b;
+    if (a > b)
+        return a;
+    else
+        return b;
 }
 
 int max3(int a, int b, int c) {
@@ -11,9 +13,11 @@ int max3(int a, int b, int c) {
 
 void solve() {
     int r, c, a[105][105];
-    if (scanf("%d %d", &r, &c) != 2) return;
+    if (scanf("%d %d", &r, &c) != 2)
+        return;
     for (int i = 0; i < r; i++) {
-        for (int j = 0; j < c; j++) scanf("%d", &a[i][j]);
+        for (int j = 0; j < c; j++)
+            scanf("%d", &a[i][j]);
     }
     for (int i = 1; i < r; i++) {
         for (int j = 0; j < c; j++) {
@@ -24,14 +28,16 @@ void solve() {
         }
     }
     int ans = 0;
-    for (int j = 0; j < c; j++) ans = max2(ans, a[r - 1][j]);
+    for (int j = 0; j < c; j++)
+        ans = max2(ans, a[r - 1][j]);
     printf("%d\n", ans);
 }
 
 int main() {
     int t;
     if (scanf("%d", &t) == 1) {
-        while (t--) solve();
+        while (t--)
+            solve();
     }
     return 0;
 }

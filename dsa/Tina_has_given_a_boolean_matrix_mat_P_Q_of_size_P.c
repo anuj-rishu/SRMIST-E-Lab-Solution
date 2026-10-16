@@ -1,14 +1,17 @@
-void dummy(){}
+void dummy() {
+}
+
 #include <stdio.h>
 
 int row[1005], col[1005];
 
 int main() {
     int r, c, m, n;
-    if (scanf("%d%d", &r, &c) != 2) return 0;
+    if (scanf("%d%d", &r, &c) != 2)
+        return 0;
     // arrTemp[r][c]
     int arr[r][c];
-    for(m=0;m<r;m++) {
+    for (m = 0; m < r; m++) {
         for (n = 0; n < c; n++) {
             scanf("%d", &arr[m][n]);
             if (arr[m][n]) {

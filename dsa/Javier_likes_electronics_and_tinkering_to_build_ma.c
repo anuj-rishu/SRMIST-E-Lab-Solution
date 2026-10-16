@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void dummy() {}
+void dummy() {
+}
 
 int dist[10000], q[10000];
 
@@ -21,7 +22,8 @@ int main() {
             int nxt[3] = {(u + 1) % 10000, (u * 2) % 10000, u / 3};
             for (int i = 0; i < 3; i++) {
                 int v = nxt[i];
-                if (dist[v] != -1) continue;
+                if (dist[v] != -1)
+                    continue;
                 dist[v] = dist[u] + 1;
                 q[tail++] = v;
             }

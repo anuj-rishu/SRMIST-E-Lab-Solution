@@ -5,11 +5,13 @@ int main() {
     scanf("%d", &t);
     while (t--) {
         int n, m;
-        int no[100],fs[100];
+        int no[100], fs[100];
         scanf("%d", &n);
-        for (int i = 0; i < n; i++) scanf("%d", &fs[i]);
+        for (int i = 0; i < n; i++)
+            scanf("%d", &fs[i]);
         scanf("%d", &m);
-        for (int i = 0; i < m; i++) scanf("%d", &no[i]);
+        for (int i = 0; i < m; i++)
+            scanf("%d", &no[i]);
         int ok = 1;
         for (int i = 0; i < m; i++) {
             int found = 0;
@@ -24,8 +26,10 @@ int main() {
                 break;
             }
         }
-        if (ok) printf("Yes\n");
-        else printf("No\n");
+        if (ok)
+            printf("Yes\n");
+        else
+            printf("No\n");
     }
     return 0;
 }

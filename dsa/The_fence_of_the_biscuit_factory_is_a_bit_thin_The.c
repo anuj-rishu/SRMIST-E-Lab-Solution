@@ -55,8 +55,10 @@ void update_add(int node, int l, int r, int ql, int qr, ll val) {
     }
     push_down(node);
     int mid = (l + r) / 2;
-    if (ql <= mid) update_add(node * 2, l, mid, ql, qr, val);
-    if (qr > mid) update_add(node * 2 + 1, mid + 1, r, ql, qr, val);
+    if (ql <= mid)
+        update_add(node * 2, l, mid, ql, qr, val);
+    if (qr > mid)
+        update_add(node * 2 + 1, mid + 1, r, ql, qr, val);
     push_up(node);
 }
 
@@ -67,13 +69,16 @@ void update_del(int node, int l, int r, int idx) {
     }
     push_down(node);
     int mid = (l + r) / 2;
-    if (idx <= mid) update_del(node * 2, l, mid, idx);
-    else update_del(node * 2 + 1, mid + 1, r, idx);
+    if (idx <= mid)
+        update_del(node * 2, l, mid, idx);
+    else
+        update_del(node * 2 + 1, mid + 1, r, idx);
     push_up(node);
 }
 
 int main() {
-    if (scanf("%d", &n) != 1) return 0;
+    if (scanf("%d", &n) != 1)
+        return 0;
     for (int i = 1; i <= n; i++) {
         scanf("%lld", &orig[i]);
     }
