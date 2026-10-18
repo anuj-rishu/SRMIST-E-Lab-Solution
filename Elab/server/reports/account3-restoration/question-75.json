@@ -1,0 +1,39 @@
+{
+  "sequenceId": 75,
+  "Q_ID": "DS_REGULAR_SET1_249",
+  "questionData": {
+    "COMPLEXITY": [
+      4,
+      330,
+      49
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "while(Q--)",
+      "for(i = 0;i<N-1;i ++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem Description:\n\nYou are given a rooted tree that contains N nodes. Each node contains a lowercase alphabet.\n\nYou are required to answer Q queries of type u,c, where u is an integer and c is a lowercase alphabet. The count of nodes in the subtree of the node u containing c is considered as the answer of all the queries. \n\nConstraints\n\n1≤N,Q≤105 1≤u,v≤N\n\n * c is a lowercase alphabet\n * si is a lowercase alphabet for all 1≤i≤N\n * 1 is the root node\n\nInput format\n\n * First line: Two space-separated integers N and Q respectively\n * Second line: A string s of length N (where the ith character of s represents the character stored in node i)\n * Next N−1 line: Two space-separated integers u and v denoting an edge between node u and node v\n * Next Q lines: An integer u and a space-separated character c\n\nOutput format\nFor each query, print the output in a new line. \n\nNote: It is guaranteed that the input generates a valid tree.\n\nExplanation for test case 1\n\nTree given in the sample input will look like that.\n\nNumber of nodes in the subtree of node 1 having 'a' stored in it is 2.",
+    "SEQ_ID": 249,
+    "SESSION_ID": 18,
+    "SESSION_NAME": "Tree 2",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "3 1\naba\n1 2\n1 3\n1 a",
+        "OUTPUT": "2"
+      },
+      {
+        "_id": 2,
+        "INPUT": "4 1\nwsx\n1 2\n1 3\n1 1\n1 w",
+        "OUTPUT": "10"
+      }
+    ],
+    "key": 249
+  }
+}

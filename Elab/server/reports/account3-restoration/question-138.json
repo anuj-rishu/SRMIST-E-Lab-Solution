@@ -1,0 +1,39 @@
+{
+  "sequenceId": 138,
+  "Q_ID": "DS_REGULAR_SET1_303",
+  "questionData": {
+    "COMPLEXITY": [
+      10,
+      515,
+      80
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "for (j=0; j<n; j++)",
+      "if (j > 0)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question Description:\nAquaman has been invited to Kerala to celebrate Onam. Suddenly, on his arrival he understands that he has been called mainly to help rescue childen from a fire accident that has happened in a posh residential locale of Trissur, where rescue is proving to be especially difficult. As he reaches the place of the fire, before him there are 'A' apartments, each of the same height 'H', which are on fire. Since it is Onam, some floors of the apartments are empty as the occupants have gone elsewhere for celebrations. In his hurry to start the rescue Aquaman reaches the top of the Apartment, but realizes that his jumping energy is depleted and restricted due to change in his geographical setting. He soon understands the restrictions of his jumping energy, and they are as follows:\n\nHe can use the jumping energy any number of times until he reaches the Ground floor, which means he can use the jumping energy only until before he reaches the Ground floor, which means, once he reaches the Ground floor, he can't move to the top floor again and try to save children.\n\nWhile switching apartments, he loses height 'J' while jumping.\n\nConstraints:\n1 ≤ H, A ≤ 2000.\n1 ≤ J ≤ 450\n1 ≤ v ≤ 2000\n1 ≤ vab ≤ H\n\nInput Format:\nInput starts with three values: the number of apartments 'A', the height of the apartments 'H', and the height Superman will lose when he switches apartments 'J'.\n\nThese are followed by 'A' lines. Each a-th line starts with a non negative integer 'v' indicating how many children are in the a-th apartment. Each of the following 'v' integers indicates that a person is at height 'va' in the a-th apartment. Each of the following 'v' integers are given and repetitions are allowed which means there can be more than one person in a floor.\n\n'a' indicates apartment number and 'b' indicates floor number. Apartment number will not be given; since 'M' lines follow the first line, you can assume that the a-th line indicates the a-th Apartment's specifications.\n\nOutput Format:\nPrint the output in a single line contains, the maximum number of children Aquaman can save.",
+    "SEQ_ID": 303,
+    "SESSION_ID": 14,
+    "SESSION_NAME": "Linked List",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "4 14 2 \n5 1 1 1 5 11\n7 9 5 7 7 3 8 8 9\n5 9 6 4 3\n0",
+        "OUTPUT": "12"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5 14 2 \n5 1 1 1 5 11\n2 5 4 6 6\n7 9 5 7 7 3 8 8 9\n5 9 6 4 3\n0",
+        "OUTPUT": "11"
+      }
+    ],
+    "key": 303
+  }
+}

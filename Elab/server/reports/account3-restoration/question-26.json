@@ -1,0 +1,41 @@
+{
+  "sequenceId": 26,
+  "Q_ID": "DS_REGULAR_SET1_135",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      169,
+      31
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "int array[n]",
+      "for(int i=0; i<n; i++)",
+      "for(int j=i+1; j<n; j++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nMalar is a First year student in reputed institution. \n\nAlthough he scored well in many subjects, he did not an expert in Algorithms.\n\nBut malar's computer examination is scheduled for next week. \n\nAs per the blueprint, many questions would come from the Arrays topic.\n\nHe collected previous year's questions. one of the repeated questions is you need to find the pairs in Array with given sum.\n\nCan you help him ?\n\nFunction Description\n\nConstraints\n\n0<n<100\n\n0<arr<1000\n\nInput Format \n\n     -First line contains the value of n that is the total number of elements in the array\n    -Second line contains the elements of array\n    -Third line contains the Sum to be checked.\n\nOutput Format\n       -Output contains as many lines as number of pairs with each pair written in each line\n    -Last line of output contains the total count of pairs.",
+    "SEQ_ID": 135,
+    "SESSION_ID": 13,
+    "SESSION_NAME": "Arrays",
+    "TAGS": [
+      "Data Structures",
+      "Arrays"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "7\n5 2 3 4 1 6 7\n7",
+        "OUTPUT": "[5 2]\n[3 4]\n[1 6]\nTotal Number of Pairs:3"
+      },
+      {
+        "_id": 2,
+        "INPUT": "9\n10 15 20 25 30 35 40 45 50\n50",
+        "OUTPUT": "[10 40]\n[15 35]\n[20 30]\nTotal Number of Pairs:3"
+      }
+    ],
+    "key": 135
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sequenceId": 251,
+  "Q_ID": "DS_REGULAR_SET1_553",
+  "questionData": {
+    "COMPLEXITY": [
+      3,
+      400,
+      75
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "for",
+      "if",
+      "else"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question Description:\nGigel's father and mother sell computer systems. The business proved to be very profitable due to an incredible credit system: a customer who buys a computer on day X (at this time N days have passed since the establishment of the store, the days are numbered from 1 to N , 0 <X ≤ N) can return the money whenever he wants, there is no imposed time limit. Thus, almost every day, at the family store, there are various customers who pay in full or in part for a computer system purchased in the previous days. Because they want to start a new business, Mom and Dad want to charge Gigel with running the computer store. For this, Gigel must meet an essential condition: at any time during his stay at the store he can be asked by phone by his father to answer as soon as possible the following family of questions: what amount of money remained unpaid considering the purchases made by customers on P , Gf + 1 , GF + 2 ... Q-1 , Q( 0 <P ≤ Q ≤ N ). It is known that two computers were never bought on the same day. Help Gigel prove to his parents that he can run the store.\n\nConstraints:\n1 ≤ N ≤ 15,000\n0 <M ≤ 100,000\nAt any time, Ai ( 1 ≤ i ≤ N ) is nonnegative.\n\nInput Format:\nThe first line of the input contains the numbers N and M. . On the next line are the values of the string A1 , A2 ... AN separated by a space. The following M lines describe the operations (payments or queries) performed in the given order. Each line describing an operation begins with a binary code (an integer with the value 0 or 1) and continues with 2 integers.\n\n1. A code 0 followed by two integers T , V ( 1 ≤ T ≤ N , 1 ≤ V ≤ 1000 ) represents an operation of type A (at that moment a value V of the remaining amount of day T was paid )\n2. A code 1 followed by two integers P , Q ( 1 ≤ P ≤ Q ≤ N ) a type B operation (the sum of all the remaining amounts from days P , P + 1 , P + 2 ... Q is required at that moment ).\n\nOutput Format:\nPrint the output in a separate lines contains, find the amounts required for each operation.",
+    "SEQ_ID": 553,
+    "SESSION_ID": 16,
+    "SESSION_NAME": "Queue",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "6 6\n1 3 2 0 0 10\n1 3 6\n1 1 4\n0 3 1\n1 1 6\n0 6 2\n1 1 6",
+        "OUTPUT": "12\n6\n15\n13"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5 4\n1 7 4 0 3\n1 2 5\n1 2 4\n0 4 1\n1 1 4",
+        "OUTPUT": "14\n11\n11"
+      }
+    ],
+    "key": 553
+  }
+}

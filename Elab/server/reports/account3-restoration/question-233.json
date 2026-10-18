@@ -1,0 +1,38 @@
+{
+  "sequenceId": 233,
+  "Q_ID": "DS_REGULAR_SET1_552",
+  "questionData": {
+    "COMPLEXITY": [
+      3,
+      590,
+      78
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "void DDFFSS(int s)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem Description\n\nRhezo likes to play with graphs having N nodes and M edges. Lonewolf is ready to give him such a graph only on one condition. He wants Rhezo to find the number of critical links in the graph.\n\nA critical link in a graph is an edge that has the following property: If we cut the link/edge, the graph will have exactly one more connected component than it previously had, and the difference between the number of nodes on each side of the edge is less than a certain integer P.\n\nGiven P and the graph, can you help Rhezo calculate the number of critical links?\n\nConstraints:\n\n1≤N,M,P≤105\n\n1≤A,B≤N\n\n1≤M≤max(105,N⋅(N−1)/2)\n\nInput:\n\nFirst line contains 3 integers N, M and P as described in the problem statement. Each of the next M lines contain 2 integers A and B, meaning that node number A has a link/edge with node number B.\n\nOutput:\n\nFind the number of critical links in the graph.",
+    "SEQ_ID": 552,
+    "SESSION_ID": 14,
+    "SESSION_NAME": "Linked List",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5 4 100\n1 2\n2 3\n3 4\n4 5",
+        "OUTPUT": "4"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5 5 50\n1 2\n2 1\n3 2\n3 1\n3 5",
+        "OUTPUT": "1"
+      }
+    ],
+    "key": 552
+  }
+}

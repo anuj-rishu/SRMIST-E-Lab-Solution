@@ -1,0 +1,39 @@
+{
+  "sequenceId": 184,
+  "Q_ID": "DS_REGULAR_SET1_439",
+  "questionData": {
+    "COMPLEXITY": [
+      11,
+      750,
+      80
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "void solve()",
+      "while(t--)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nCrossing all the hurdles, Gudi now reaches the roof of the castle and she finds Puchi, the Lord of Azkahar and the Protector of the castle, waiting for her. After having been through the stages in the castle, Gudi has had a change of heart and no longer wants the treasure. Instead, she expresses her desire to become the Lady of Azkahar. However, the position of the Lady can not be won that easily. Puchi decides to take a final test.\nHe weaves his magic and N Islands, spread across a vast sea , appear before them. He goes on the say :\n\nThe Lady needs to rule the masses and take important decisions. Let us see how well can you do that. These are N Islands, indexed from 1 to N. There are M bidirectional roads in total, wherein each road connects 2 distinct Islands and multiple roads may connect a pair of Islands. Each of the first K Islands i.e. Islands with index from 1 to K, have a soldier who fought valiantly in the battle and wants to get to a shelter. Each of the last K Islands i.e. Island with index from N−K+1 to N, have a shelter home that can house only 1 Soldier. \nThese soldiers await your commands. The cost effort of reaching a shelter for a soldier is the distance that has to be traveled. In addition, you have the option of using magic to transport the soldiers. One use of magic will allow you to move any solider from any island to any other island. Using your magic once costs 104 units of effort. You can always use your magic, but then again it comes at a huge cost. Give a target shelter to each of the soldiers and minimize the overall cost efforts of the scenario.\n\n\nHelp Gudi find the minimum cost efforts.\n\nConstraints\n1≤T≤10\n1≤K≤80\n2K+1≤N≤200\n1≤M≤1000\n1≤X,Y≤N\n1≤C≤1000\n\nInput\nFirst line contains an integer T.T testcases follow.\nEach testcase consists of 3 space-separated integers N, M and K. M lines follow.\nEach of these lines, contains 3 integers X, Y and C, denoting that there is a road between Island X and Island Y of distance C units.\n\nOutput\nPrint the answer to each testcase in a new line.",
+    "SEQ_ID": 439,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "2\n6 8 2\n1 2 2\n1 6 5\n1 4 1\n4 3 1\n3 6 1\n3 5 2\n4 5 1\n2 6 2\n6 5 2\n3 1 2\n1 4 1\n3 5 3\n3 6 1\n4 3 2",
+        "OUTPUT": "4\n10003"
+      },
+      {
+        "_id": 2,
+        "INPUT": "1\n7 19 3\n5 7 4\n6 7 6\n6 7 10\n1 3 10\n3 6 9\n3 6 9\n6 7 1\n6 7 8\n4 7 7\n1 3 10\n3 6 5\n6 7 7\n3 7 6\n5 7 6\n6 7 7\n2 6 9\n5 6 9\n1 6 1\n1 5 6",
+        "OUTPUT": "21"
+      }
+    ],
+    "key": 439
+  }
+}

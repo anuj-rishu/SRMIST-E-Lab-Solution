@@ -1,0 +1,6 @@
+.env*
+!.env.example
+!package.json
+node_modules/
+dist/
+.cache/

@@ -1,0 +1,38 @@
+{
+  "sequenceId": 281,
+  "Q_ID": "DS_REGULAR_SET1_469",
+  "questionData": {
+    "COMPLEXITY": [
+      2,
+      340,
+      43
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "for(i=1;i<n;i++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Oliver and Bob are best friends. They have spent their entire childhood in the beautiful city of Byteland. The people of Byteland live happily along with the King.\nThe city has a unique architecture with total N houses. The King's Mansion is a very big and beautiful bungalow having address = 1. Rest of the houses in Byteland have some unique address, (say A), are connected by roads and there is always a unique path between any two houses in the city. Note that the King's Mansion is also included in these houses.\n\nOliver and Bob have decided to play Hide and Seek taking the entire city as their arena. In the given scenario of the game, it's Oliver's turn to hide and Bob is supposed to find him.\nOliver can hide in any of the houses in the city including the King's Mansion. As Bob is a very lazy person, for finding Oliver, he either goes towards the King's Mansion (he stops when he reaches there), or he moves away from the Mansion in any possible path till the last house on that path.\n\nOliver runs and hides in some house (say X) and Bob is starting the game from his house (say Y). If Bob reaches house X, then he surely finds Oliver.\n\nGiven Q queries, you need to tell Bob if it is possible for him to find Oliver or not.\n\nThe queries can be of the following two types:\n0 X Y : Bob moves towards the King's Mansion.\n1 X Y : Bob moves away from the King's Mansion\n\nCONSTRAINTS :\n1 ≤ N ≤ 10^5\n1 ≤ A,B ≤ N\n1 ≤ Q ≤ 5*10^5\n1 ≤ X,Y ≤ N\n\nINPUT :\nThe first line of the input contains a single integer N, total number of houses in the city. Next N-1lines contain two space separated integers A and B denoting a road between the houses at address A and B.\nNext line contains a single integer Q denoting the number of queries.\nFollowing Q lines contain three space separated integers representing each query as explained above.\n\nOUTPUT :\nPrint \"YES\" or \"NO\" for each query depending on the answer to that query.",
+    "SEQ_ID": 469,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "9\n1 2\n1 3\n2 6\n2 7\n6 9\n7 8\n3 4\n3 5\n5\n0 2 8\n1 2 8\n1 6 5\n0 6 5\n1 9 1",
+        "OUTPUT": "YES\nNO\nNO\nNO\nYES"
+      },
+      {
+        "_id": 2,
+        "INPUT": "9\n1 4\n1 3\n2 5\n2 6\n6 8\n7 9\n3 5\n3 4\n5\n0 2 8\n1 2 8\n1 6 5\n0 6 5\n1 9 1",
+        "OUTPUT": "NO\nNO\nNO\nNO\nNO"
+      }
+    ],
+    "key": 469
+  }
+}

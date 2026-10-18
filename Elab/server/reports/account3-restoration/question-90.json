@@ -1,0 +1,38 @@
+{
+  "sequenceId": 90,
+  "Q_ID": "DS_REGULAR_SET1_273",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      475,
+      50
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "while(m--)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nByteland has n cities and m roads between them. The goal is to construct new roads so that there is a route between any two cities.\nYour task is to find out the minimum number of roads required, and also determine which roads should be built.\n\nConstraints\n\n1≤n≤10^5\n1≤m≤2⋅10^5\n1≤a,b≤n\n\nInput\n\nThe first input line has two integers n and m: the number of cities and roads. The cities are numbered 1,2,…,n.\n\nAfter that, there are m lines describing the roads. Each line has two integers a and b: there is a road between those cities.\n\nA road always connects two different cities, and there is at most one road between any two cities.\n\nOutput\n\nFirst print an integer k: the number of required roads.\n\nThen, print k lines that describe the new roads. You can print any valid solution.",
+    "SEQ_ID": 273,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "4 2\n1 2\n3 4",
+        "OUTPUT": "1\n2 4"
+      },
+      {
+        "_id": 2,
+        "INPUT": "4 2\n2 3\n2 4",
+        "OUTPUT": "1\n1 4"
+      }
+    ],
+    "key": 273
+  }
+}

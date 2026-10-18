@@ -1,0 +1,41 @@
+{
+  "sequenceId": 126,
+  "Q_ID": "DS_REGULAR_SET1_140",
+  "questionData": {
+    "COMPLEXITY": [
+      1,
+      220,
+      34
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "void swap(int *a,int *b)",
+      "int arr[n]",
+      "for(i=0;i<n;i++)",
+      "while(low<high)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nNathan won the man of the match award in the recently concluded local tournament final. So the friends of nathan have asked him to take them to cinemas as a trat for winning man of the match.But \n\nNathan is short of money to take them to cinemas so to postpone the cinema plan he tred to engage them with the programming challenge. \n\nThe task was, Given an array arr[], that contains only 0’s and 1’s. with the help of user defined function that separate 0’s and 1’s in the array.\n\nFunction Description\n\n1.Initialize two variables leftIndex and rightIndex to index 0 and N-1.\n2.Find first 1 by moving leftIndex from left to right\n3.Find first 0 by moving rightIndex from right to left.\n4.Swap array[leftIndex] and array[rightIndex].\nRepeat above process till rightIndex > leftIndex.\n\nConstraints\n\n0<n<100\n\n0<arr<100\n\nInput Format\n\nFirst line indicates the number of elements n\n\nSecond line indicates the array elements.\n\nOutput Format\n\nSingle line indicates the separate 0’s and 1’s in the array.\n\nExample\n\nInput: 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1\nOutput: 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1",
+    "SEQ_ID": 140,
+    "SESSION_ID": 13,
+    "SESSION_NAME": "Arrays",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "10\n1 0 0 1 0 1 0 1 1 0",
+        "OUTPUT": "0 0 0 0 0 1 1 1 1 1"
+      },
+      {
+        "_id": 2,
+        "INPUT": "15\n1 0 0 1 0 1 0 1 1 0 1 1 1 0 1",
+        "OUTPUT": "0 0 0 0 0 0 1 1 1 1 1 1 1 1 1"
+      }
+    ],
+    "key": 140
+  }
+}

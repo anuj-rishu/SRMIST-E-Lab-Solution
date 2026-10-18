@@ -1,0 +1,38 @@
+{
+  "sequenceId": 65,
+  "Q_ID": "DS_REGULAR_SET1_363",
+  "questionData": {
+    "COMPLEXITY": [
+      8,
+      390,
+      41
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "for(i=1;i<=n;i++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nThere are three common ways to traverse the nodes of a binary tree:\n\n * Preorder: First process the root, then the left subtree, and finally the right subtree.\n * Inorder: First process the left subtree, then the root, and finally the right subtree.\n * Postorder: First process the left subtree, then the right subtree, and finally the root.\n\nThere is a binary tree of n nodes with distinct labels. You are given the preorder and inorder traversals of the tree, and your task is to determine its postorder traversal.\n\nConstraints\n\n * 1≤n≤10^5\n\nInput\n\nThe first input line has an integer n : the number of nodes. The nodes are numbered 1,2,…,n.\n\nAfter this, there are two lines describing the preorder and inorder traversals of the tree. Both lines consist of n integers.\n\nYou can assume that the input corresponds to a binary tree.\n\nOutput\n\nPrint the postorder traversal of the tree.",
+    "SEQ_ID": 363,
+    "SESSION_ID": 17,
+    "SESSION_NAME": "Tree 1",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5\n5 3 2 1 4\n3 5 1 2 4",
+        "OUTPUT": "3 1 4 2 5"
+      },
+      {
+        "_id": 2,
+        "INPUT": "6\n6 5 3 2 1 4\n6 3 5 1 2 4",
+        "OUTPUT": "3 1 4 2 5 6"
+      }
+    ],
+    "key": 363
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "sequenceId": 86,
+  "Q_ID": "DS_REGULAR_SET1_294",
+  "questionData": {
+    "COMPLEXITY": [
+      2,
+      480,
+      60
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "for(i=1;i<=n;++i)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nTeddy is visiting the country wonderland. wonderland has n cities and m bi-directional roads. There are k types of tokens. Token i costs ci. The costs of the tokens are such that for all 2≤i≤k, ci≥2ci−1. For each road, you need to have a particular set of tokens, if you want to travel it. Note that you don't have to give the tokens, you just need to show them. Thus, one token can be used at any number of roads, where it is required. Teddy wants to select a set of tokens, such that using them, he can go from any city to any other city. You have to help him minimize the total cost of tokens he buys.\n\nConstraints\n\n1≤n≤105\n\n1≤m≤105\n\nNo road connects a city to the same city. However, there can be multiple roads between two cities.\n\n1≤ci≤1018\n\nFor all 2≤i≤k, ci≥2ci−1\n\nInput:\n\n * The first line contains three space separated integers, n m and k .\n * The second line contains k space separated integers, where the ith integer denotes the price of ith token, i.e. ci .\n * ith of the next m lines contains three integers ui,vi,li, where li is the number of tokens required by the ith road, followed by li indices denoting the tokens required. This road connects cities ui and vi\n\nOutput:\n\n * Print one integer containing the minimum cost of tokens Teddy has to buy, such that he can travel from any city to any other city. If it is impossible to choose such a set of tokens, print 1.",
+    "SEQ_ID": 294,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "3 3 4\n1 2 5 10\n1 2 2 1 2\n1 3 1 3\n2 3 1 4",
+        "OUTPUT": "8"
+      },
+      {
+        "_id": 2,
+        "INPUT": "3 3 4\n11 21 15 10\n1 21 2 11 2\n1 13 1 3\n2 31 1 4",
+        "OUTPUT": "57"
+      }
+    ],
+    "key": 294
+  }
+}

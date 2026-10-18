@@ -1,0 +1,38 @@
+{
+  "sequenceId": 291,
+  "Q_ID": "DS_REGULAR_SET1_570",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      240,
+      38
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "int magicsum(int arr[],int n)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem description:\n\nWe have a FULL binary tree i.e. each node except leaves has two children. \nThe magic sum between any two leaf nodes (both possibly same) is the number obtained after adding values of all the nodes (including starting and ending nodes) in a unique path from first leaf to the later one. \nYour task is to find the maximum magic sum in the binary tree.\n\nNote: If path ends and starts at the same node, count that node only once.\n\nConstraints : \n1 ≤ T ≤ 500 \n1 ≤ N ≤ 511\n-106 ≤ V[i] ≤ 106\n\nInput Format: \nFirst line of input contains T, the number of test cases. The first line of each test case contains N, the number of nodes in the tree. The next line contains an array V denoting values for N nodes in level order (left to right) traversal manner.\n\nOutput Format: \nFor every case output the maximum magic sum in the binary tree.",
+    "SEQ_ID": 570,
+    "SESSION_ID": 20,
+    "SESSION_NAME": "Hashing",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "1\n7\n2 4 5 8 -4 3 -6",
+        "OUTPUT": "22"
+      },
+      {
+        "_id": 2,
+        "INPUT": "1\n7\n12 14 51 81 -14 31 -16",
+        "OUTPUT": "189"
+      }
+    ],
+    "key": 570
+  }
+}

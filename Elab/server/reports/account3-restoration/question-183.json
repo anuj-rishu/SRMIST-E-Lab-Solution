@@ -1,0 +1,38 @@
+{
+  "sequenceId": 183,
+  "Q_ID": "DS_REGULAR_SET1_373",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      1500,
+      130
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "void dfsSmall(int i,int p)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nThere are n cities and n−1 roads between them. There is a unique route between any two cities, and their distance is the number of roads on that route.\n\nA company wants to have offices in some cities, but the distance between any two offices has to be at least d. What is the maximum number of offices they can have?\n\n\nConstraints\n\n * 1≤n,d≤2⋅10^5\n * 1≤a,b≤n\n\n\nInput\n\nThe first input line has two integers n and d: the number of cities and the minimum distance. The cities are numbered 1,2,…,n.\n\nAfter this, there are n−1 lines describing the roads. Each line has two integers a and b: there is a road between cities a and b.\n\nOutput\n\nFirst print an integer k: the maximum number of offices. After that, print the cities which will have offices. You can print any valid solution.",
+    "SEQ_ID": 373,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5 3\n1 2\n2 3\n3 4\n3 5",
+        "OUTPUT": "2\n1 4"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5 3\n1 3\n1 2\n2 4\n4 5",
+        "OUTPUT": "2\n1 5"
+      }
+    ],
+    "key": 373
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "sequenceId": 279,
+  "Q_ID": "DS_REGULAR_SET1_503",
+  "questionData": {
+    "COMPLEXITY": [
+      2,
+      1300,
+      160
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "struct node",
+      "struct node *next;"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nConsider a grid with N rows and M columns, where each cell has some integer value written in it. Every cell is connected to every side adjacent cell via an undirected edge. The cost of an edge e connecting any two cells with value a and b is Ce=a⊕b. (Here ⊕ denotes bitwise xor of two the integers a and b)\n\nWe define a good trip between two cells (r1,c1)and (r2,c2) as a trip starting at cell (r1,c1) and ending at cell (r2,c2) while visiting every cell of the grid at least once.\n\nThere is a cost associated with every good trip. Let's say, for a given edge e, you travel that edge Te times. Then the cost of the trip is:\n\n∑∀e(Ce∗⌈Te2⌉)\n\nHere, ⌈Te2⌉ is the ceiling of the result of division of Te by 2\n\nFor the given starting cell (r1,c1) and ending cell (r2,c2), you have to find the minimum cost of a good trip.\n\nConstraints\n\n1≤T≤10\n\n1≤N×M≤105\n\n1≤r1,r2≤N\n\n1≤c1,c2≤M\n\n1≤Grid(i,j)≤104\n\nwhere Grid(i,j) denotes the integer in the given grid at cell (i,j).\n\n \n\nInput Format\n\nThe first line will consist of the integer T denoting the number of test cases.\n\nFor each of the T test cases, the first line will consist of two integers N and M, denoting the number of rows and columns of the grid respectively.\n\nThe second line will consist of four integers, r1c1r2c2, denoting the coordinates (r1,c1) of the starting cell and (r2,c2) of the ending cell.\n\nThen, N lines will follow, each containing M integers, denoting the values in the grid, such that the jth value in the ith row will denote the number in the cell (i,j) of the grid.\n\nOutput Format\n\nFor each of the T test cases, output a single integer, denoting the minimum cost of a good trip.",
+    "SEQ_ID": 503,
+    "SESSION_ID": 18,
+    "SESSION_NAME": "Tree 2",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "2\n2 2\n1 1 2 1\n1 2\n2 2\n1 3\n1 2 1 3\n1 3 4",
+        "OUTPUT": "3\n9"
+      },
+      {
+        "_id": 2,
+        "INPUT": "2\n2 2\n1 4 2 3\n1 4\n2 3\n1 4\n1 4 5 3\n1 6 5",
+        "OUTPUT": "9\n16"
+      }
+    ],
+    "key": 503
+  }
+}

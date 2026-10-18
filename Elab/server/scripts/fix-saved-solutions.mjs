@@ -1,0 +1,147 @@
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { resolve } from "node:path";
+import { parseEnv } from "node:util";
+import mongoose from "mongoose";
+import { ELAB_CONFIG, EMBEDDING_CONFIG } from "../dist/src/config/settings.js";
+import { ElabService } from "../dist/src/services/elab.service.js";
+import { EmbeddingService } from "../dist/src/services/embedding.service.js";
+import { parseElabToken } from "../dist/src/utils/elab-token.js";
+import { prepareSubmissionCode } from "../dist/src/utils/mandatory-code.js";
+import { submissionLanguage } from "../dist/src/utils/submission-language.js";
+const { studentInfo, authorization } = parseElabToken(
+  readFileSync(process.env.ELAB_TOKEN_FILE, "utf8").trim(),
+);
+const elab = new ElabService(ELAB_CONFIG);
+const courses = await elab.registeredCourses(studentInfo, authorization);
+const course = courses.data.courses.find((c) => c.COURSE_ID === 26);
+const a = parseEnv(readFileSync(".env", "utf8")),
+  b = parseEnv(readFileSync(".env.local", "utf8"));
+const config = {
+  ...EMBEDDING_CONFIG,
+  cacheDir: resolve(EMBEDDING_CONFIG.cacheDir),
+};
+const embeddings = new EmbeddingService(config);
+const folder = "info/course-26-86-300/fixes";
+mkdirSync(folder, { recursive: true });
+try {
+  await mongoose.connect(b.MONGODB_URI || a.MONGODB_URI, {
+    serverSelectionTimeoutMS: 10000,
+  });
+  for (const value of process.argv.slice(2)) {
+    const seq = Number(value);
+    let report;
+    try {
+      parseElabToken(authorization);
+      const file = ["c", "cpp"]
+        .map((ext) => `solutions/review/question-${seq}.${ext}`)
+        .find(existsSync);
+      const question = JSON.parse(
+        readFileSync(`info/course-26-86-300/question-${seq}.json`, "utf8"),
+      ).questionData;
+      const code = prepareSubmissionCode(
+        readFileSync(file, "utf8"),
+        question.MANDATORY,
+        question.COMPLEXITY[2],
+      );
+      const current = await elab.getQuestionInfo(
+        studentInfo,
+        course,
+        seq,
+        "S",
+        authorization,
+      );
+      if (current.data.studentData?.Q_ID !== `DS_REGULAR_SET1_${question.key}`)
+        throw new Error("Question mismatch");
+      const language = submissionLanguage(code);
+      const logs = await elab.saveQuestionLogs(
+        studentInfo,
+        code,
+        "0",
+        authorization,
+        language,
+      );
+      if (logs.data.Status !== 1) throw new Error("Logs failed");
+      const evaluation = await elab.evaluateQuestion(
+        studentInfo,
+        current.data.studentData,
+        code,
+        authorization,
+        language,
+      );
+      report = {
+        sequenceId: seq,
+        language,
+        result: evaluation.data.result,
+        updatedAt: new Date().toISOString(),
+      };
+      if (
+        Number(report.result?.evalPercentage) === 100 &&
+        report.result?.statusCode === "200"
+      ) {
+        const filename = `verified_DS_REGULAR_SET1_${question.key}.` + language;
+        const text = embeddings.normalize(question.Q_DESC);
+        const [embedding] = await embeddings.embed([text]);
+        const collection = mongoose.connection.collection("solutions");
+        const existing = await collection.findOne({
+          category: "dsa",
+          filename,
+        });
+        if (existing)
+          writeFileSync(
+            `${folder}/backup-${seq}-${Date.now()}.json`,
+            JSON.stringify(existing),
+            { mode: 0o600 },
+          );
+        const doc = {
+          filename,
+          title: question.Q_DESC.replace(
+            /^(?:problem|question)\s+(?:description|statement)\s*:?\s*/i,
+            "",
+          ).slice(0, 100),
+          category: "dsa",
+          categoryLabel: "Data Structures",
+          courseId: 26,
+          tags: ["Data Structures"],
+          solution: code,
+          embedding,
+          embeddingText: text,
+          embeddingModel: config.model,
+          embeddingRevision: config.revision,
+          embeddingVersion: embeddings.version,
+          embeddingHash: embeddings.hash(text),
+          embeddingUpdatedAt: new Date(),
+          verifiedQuestionId: current.data.studentData.Q_ID,
+          verifiedPercentage: 100,
+        };
+        // Raw collection supports provenance without changing normal runtime schema.
+        await collection.updateOne(
+          { category: "dsa", filename },
+          { $set: doc },
+          { upsert: true },
+        );
+        report.savedToDatabase = true;
+      }
+    } catch (e) {
+      report = {
+        sequenceId: seq,
+        error: e.status ? e.message : e.name,
+        status: e.status,
+      };
+    }
+    writeFileSync(
+      `${folder}/question-${seq}.json`,
+      JSON.stringify(report, null, 2) + "\n",
+      { mode: 0o600 },
+    );
+    console.log(
+      JSON.stringify({
+        sequenceId: seq,
+        score: report.result?.evalPercentage,
+        saved: report.savedToDatabase,
+        error: report.error,
+      }),
+    );
+  }
+} finally {
+  await mongoose.disconnect();
+}

@@ -1,0 +1,38 @@
+{
+  "sequenceId": 234,
+  "Q_ID": "DS_REGULAR_SET1_538",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      160,
+      25
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "while(k--)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem Description\n\nMatt loves Graph Theory. He recently enrolled into the Algorithms course and started liking it too. His teacher understood his love for graphs and decided to give him a problem.\n\nShe gives him a Tree and asks him to write a program to find if it's connected or not. She realizes that Matt would do this in no time. So, instead she gives him a Graph and then removes a vertex from it and now asks him to find if the resultant graph is connected or not.\n\nSince he is new to programming and algorithms, you have to help him solve this problem.\n\n\nConstraints\n\n1 ≤ N ≤ 105\n1 ≤ k ≤ 2×105\n0 ≤ a,b ≤ 105\n0 ≤ x ≤ 105\n\n\nInput Format\n\nFirst line contains a single integer N denoting the number of vertices in the graph. Second line contains a single integer k denoting the number of edges in the graph. k lines follow each containing two space separated integers a and b denoting the edge between the vertices a and b. Then, the last line contains a single integer x which denotes the vertex that is removed from the graph.\n\n\nOutput Format\n\n\"Connected\" (without quotes) if the resultant graph is connected. \"Not Connected\" (without quotes), otherwise.",
+    "SEQ_ID": 538,
+    "SESSION_ID": 14,
+    "SESSION_NAME": "Linked List",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "4\n3\n3 0\n0 1\n1 2\n2",
+        "OUTPUT": "Connected"
+      },
+      {
+        "_id": 2,
+        "INPUT": "4\n3\n3 1\n1 2\n1 2\n2",
+        "OUTPUT": "Not Connected"
+      }
+    ],
+    "key": 538
+  }
+}

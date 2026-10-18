@@ -1,0 +1,39 @@
+{
+  "sequenceId": 286,
+  "Q_ID": "DS_REGULAR_SET1_444",
+  "questionData": {
+    "COMPLEXITY": [
+      2,
+      600,
+      119
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "void push(int value)",
+      "int pop()"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nGiven a directed flow network where each edge has a capacity of flow it could allow, find the maximum flow over the network from source(S) to sink(T).\n\nNetwork will follow these rules:\n\n * Only one source(S) and only one sink(T).\n * Other than source and sink, nodes are represented with alphabets [A−O].\n * There are no self loops.\n * There will be no initial dead ends other than T.\n * For any pair of nodes, direction of edges between them will be in single direction.\n\nConstraints:\n\n * 1≤E≤50\n * 1≤Cx≤50\n * Network includes S, T, a maximum of 15other nodes.\n\nInput Format:\nFirst line has an integer E- number of edges.\nNext E lines have three values Vi Vj Cx which implies there is a node from Vi to Vj with capacity Cx.\n\nOutput Format:\nPrint a single integer which is the maximum flow from source to sink.",
+    "SEQ_ID": 444,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "10\nS A 8\nS B 10\nA B 4\nA C 8\nA D 5\nB D 2\nB C 5\nC T 4\nC D 3\nD T 12",
+        "OUTPUT": "14"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5\nD D 4\nS C 6\nC T 3\nC D 5\nD T 2",
+        "OUTPUT": "5"
+      }
+    ],
+    "key": 444
+  }
+}

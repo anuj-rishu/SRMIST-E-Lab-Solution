@@ -1,0 +1,40 @@
+{
+  "sequenceId": 189,
+  "Q_ID": "DS_REGULAR_SET1_433",
+  "questionData": {
+    "COMPLEXITY": [
+      7,
+      550,
+      95
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "bool bfs()",
+      "while(!q.empty())",
+      "void maxflow()"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nMani wants to open his very own bakery in the city. Being an apprentice of the famous SAF who was known for his exquisite cake recipes, the residents of the city have similar high expectations from him.\nThere are M types of ingredients from which cakes are made, each of which has a cost. Each cake needs some number of these ingredients, not necessarily all of them. Initially, Mani has no ingredient present at his shop. He needs to buy the ones he needs. Once he buys some ingredient, he has access to an unlimited supply of it and does not need to ever buy it again.\nAt the grand opening of his bakery, Mani received orders from N customers, along with the price the customer is willing to pay for their ordered cake. Mani must decide to bake some of these cakes (not necessarily all) so that he can maximise his earnings. His earnings will be the money he earns from the sale of the cakes he bakes minus the cost of the ingredients he bought. Note that he may choose not to bake any cake.\nGiven a set of M ingredients available and a set of N cake orders, help Mani find the maximum amount he can earn.\n\nConstraints:\n1 <= N, M <= 200\n1 <= selling prices of cakes, costs of ingredients <= 109\n\nInput Format: \nThe first line contains two integers N and M denoting the number of cake orders and ingredients respectively.\nThe second line contains N integers denoting the selling prices of the cakes.\nThe third line contains M integers denoting the costs of the ingredients.\nThe next N lines contain M integers each. The jthinteger in the ith line is 1 if the ith cake needs the jth ingredient and 0 otherwise.\n\nOutput Format:\nOutput a single integer which is the answer to the problem.",
+    "SEQ_ID": 433,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "2 3\n500 10\n1000 2 3\n1 1 0\n0 1 1",
+        "OUTPUT": "5"
+      },
+      {
+        "_id": 2,
+        "INPUT": "3 3\n1500 150 75\n500 10 30\n1 1 0\n0 1 1",
+        "OUTPUT": "1185"
+      }
+    ],
+    "key": 433
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "sequenceId": 195,
+  "Q_ID": "DS_REGULAR_SET1_475",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      250,
+      26
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "for(i=0;i<f;i++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem description\n\nM found two papers and a pencil in his room (as you know it's so valuable for a prisoner). a weighted (weights are either 0 or 1) graph is drawn on the first paper.\n\nM is forced to draw a spanning tree of the graph (which is drawn on the first paper) on the second paper which includes odd number of 1 weighted edges.\n\nCan M draw a spanning tree with the conditions described above?\n\nConstraints\n\n1≤n,m≤3×105\n\n1≤vi,ui≤n 0≤wi≤1\n\nIt is guaranteed that there is no multiple edges or self loops in the graph.\n\nInput\n\nFirst line contains two integers n,m, number of first paper graph's vertices and number of first paper graph's edges.\n\nEach of the following m lines contains vi,ui and wi separated space describing graph's ith edge's vertices(vi,ui) and its weight (wi).\n\nOutput\n\nIn the only line of output print YES if M can draw a spanning tree of the first paper's graph with odd number of 1 weighted edges and otherwise print NO.",
+    "SEQ_ID": 475,
+    "SESSION_ID": 20,
+    "SESSION_NAME": "Hashing",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5 4\n3 5 1\n4 5 1\n1 2 0\n5 1 1",
+        "OUTPUT": "YES"
+      },
+      {
+        "_id": 2,
+        "INPUT": "15 14\n14 3 0\n10 13 1\n1 12 0\n14 5 1\n1 9 1\n7 12 1\n2 4 1\n15 1 1\n11 12 0\n6 12 1\n3 13 1\n5 8 1\n11 4 1\n12 3 0",
+        "OUTPUT": "NO"
+      }
+    ],
+    "key": 475
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "elab-api-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "start": "node dist/src/server.js",
+    "dev": "nodemon --watch src --watch .env --watch .env.local --watch tsconfig.json --ext ts,json,env,local --exec \"npm run build && node dist/src/server.js\"",
+    "format": "prettier --write \"src/**/*.ts\" package.json package-lock.json tsconfig.json",
+    "format:check": "prettier --check \"src/**/*.ts\" package.json package-lock.json tsconfig.json",
+    "db:sync-course-ids": "npm run build && node dist/src/scripts/sync-solution-course-ids.js",
+    "db:embeddings": "npm run build && node dist/src/scripts/generate-embeddings.js"
+  },
+  "devDependencies": {
+    "@types/html-to-text": "^9.0.4",
+    "@types/node": "^20.19.43",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
+    "html-to-text": "^10.0.1",
+    "mongoose": "^9.11.2",
+    "pino": "^10.4.0"
+  }
+}

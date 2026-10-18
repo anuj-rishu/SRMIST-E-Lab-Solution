@@ -1,0 +1,38 @@
+{
+  "sequenceId": 87,
+  "Q_ID": "DS_REGULAR_SET1_282",
+  "questionData": {
+    "COMPLEXITY": [
+      1,
+      730,
+      90
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 1,
+    "MANDATORY": [
+      "void link(int i,int j)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nA game has n rooms and m tunnels between them. Each room has a certain number of coins. What is the maximum number of coins you can collect while moving through the tunnels when you can freely choose your starting and ending room?\n\nInput\n\nThe first input line has two integers n and m: the number of rooms and tunnels. The rooms are numbered 1,2,…,n.\n\nThen, there are n integers k1,k2,…,kn: the number of coins in each room.\n\nFinally, there are m lines describing the tunnels. Each line has two integers a and b: there is a tunnel from the room a to room b. Each tunnel is a one-way tunnel.\n\nOutput\n\nPrint one integer: the maximum number of coins you can collect.\n\nConstraints\n \n\n * 1≤n≤10^5\n * 1≤m≤2⋅10^5\n * 1≤ki≤10^9\n * 1≤a,b≤n",
+    "SEQ_ID": 282,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "4 4\n4 5 2 7\n1 2\n2 1\n1 3\n2 4",
+        "OUTPUT": "16"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5 5\n3 2 5 3 4\n1 2\n2 1\n1 3\n1 4",
+        "OUTPUT": "10"
+      }
+    ],
+    "key": 282
+  }
+}

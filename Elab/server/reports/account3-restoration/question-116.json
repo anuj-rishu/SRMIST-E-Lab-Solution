@@ -1,0 +1,39 @@
+{
+  "sequenceId": 116,
+  "Q_ID": "DS_REGULAR_SET1_170",
+  "questionData": {
+    "COMPLEXITY": [
+      4,
+      150,
+      20
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "int a[n+1];",
+      "for(i=0,j=n-1;i<=j;i++,j--)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem Description: \nToday is Vignesh's birthday, and he will go shopping to buy ice spheres. All n ice spheres are placed in a row and they are numbered from 1 to n from left to right. Each ice sphere has a positive integer price. In this version all prices are different. \n\nAn ice sphere is cheap if it costs strictly less than two neighboring ice spheres: the nearest to the left and the nearest to the right. The leftmost and the rightmost ice spheres are not cheap. Vignesh will choose all cheap ice spheres and then buy only them. \n\nYou can visit the shop before Vignesh and reorder the ice spheres as you wish. Find out the maximum number of ice spheres that Vignesh can buy, and show how the ice spheres should be reordered. \n\nConstraints: \n1 ≤ n ≤ 10^5 \n1≤ai≤10^9 \n\nInput Format: \nThe first line contains a single integer n — the number of ice spheres in the shop. \n\nThe second line contains n different integers a1,a2,…,an — the prices of ice spheres \n\nOutput Format: \nIn the first line print the maximum number of ice spheres that Vignesh can buy. \n\nIn the second line print the prices of ice spheres in the optimal order.",
+    "SEQ_ID": 170,
+    "SESSION_ID": 12,
+    "SESSION_NAME": "Sorting",
+    "TAGS": [
+      "Sorting"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5\n1 2 3 4 5",
+        "OUTPUT": "2\n5 1 4 2 3"
+      },
+      {
+        "_id": 2,
+        "INPUT": "1\n1000000000",
+        "OUTPUT": "0\n1000000000"
+      }
+    ],
+    "key": 170
+  }
+}

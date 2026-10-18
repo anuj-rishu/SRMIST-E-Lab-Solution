@@ -1,0 +1,38 @@
+{
+  "sequenceId": 205,
+  "Q_ID": "DS_REGULAR_SET1_31",
+  "questionData": {
+    "COMPLEXITY": [
+      8,
+      580,
+      68
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "0"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question Description:\nThere are N pockets and each pocket contains some bitcoin(s). Your task is to select an integer X and remove all the pockets in which the number of bitcoins is equal to X. Divide the remaining pockets into two non-empty groups such that:\n\nThe number of bitcoin(s) in each pocket of the first group is strictly smaller than X.\nThe number of bitcoin(s) in each pocket of the second group is strictly larger than X.\nThe total number of bitcoins of one group is equal to the other.\n\nConstraints:\n1 <= N <= 10^5\n1 <= Ai <= 10^5\n\nInput Format:\nThe first line contains an integer N denoting the number of pockets.\nThe second line contains N space-separated integers, denoting the number of bitcoins in N pockets. The i-th integer denotes the values of Ai\n\nOutput Format:\nPrint YES, if it is possible to divide the pockets into two groups, else print NO.",
+    "SEQ_ID": 31,
+    "SESSION_ID": 11,
+    "SESSION_NAME": "Searching",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "6\n2 1 2 4 4 5",
+        "OUTPUT": "YES"
+      },
+      {
+        "_id": 2,
+        "INPUT": "5\n1 1 2 4 4",
+        "OUTPUT": "YES"
+      }
+    ],
+    "key": 31
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "sequenceId": 145,
+  "Q_ID": "DS_REGULAR_SET1_323",
+  "questionData": {
+    "COMPLEXITY": [
+      8,
+      330,
+      66
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 2,
+    "MANDATORY": [
+      "string s;"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question Description:\nA little fire started in the generator room, and it needs to be removed!\n\nThere are some generators in the generator room, each of whom belongs to of one of M political members. Those members are named after the first M (uppercase) letters of the English alphabet.\n\nThe emergency door is wide enough for up to two generators, so in each step of the remove, you may choose to remove either one or two generators from the room.\n\nThe generate rules indicate the generators in the room may vote on any bill at any time, even in the middle of a remove! So, the generators must be removed in a way that ensures that no party ever has an absolute majority. That is, it can never be the case after any remove step that more than half of the generators in the generate room belong to the same party.\n\nCan you construct an remove plan? The generate is trust you!\n\nConstraints:\n1 ≤ T ≤ 50.\n1 ≤ Qi ≤ 1000\n2 ≤ M ≤ 26\n\nInput Format:\nThe first line of the input gives the number of test cases, T. T test cases follow. Each test case consists of two lines. The first line contains a single integer M, the number of parties. The second line contains M integers, Q1, Q2, ..., QN, where Qi represents the number of generators of the party named after the i-th letter of the alphabet.\n\nOutput Format:\nPrint the output in a separate space list of instructions in the order in which they are to be carried out, where each instruction is either one or two characters, representing the members of the generators to remove in each step.\n\nIt is guaranteed that at least one valid removable plan will exist. If multiple removable plans are valid, you may output any of them.",
+    "SEQ_ID": 323,
+    "SESSION_ID": 15,
+    "SESSION_NAME": "Stack",
+    "TAGS": [
+      "Algorithms"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "5\n3\n2 3 2\n2\n3 2\n2\n1 2\n3\n2 3 1\n3\n1 2 3",
+        "OUTPUT": "Line #1: A BC AB CB\nLine #2: A BA BA\nLine #3: B AB\nLine #4: AB CB AB\nLine #5: AC BC BC"
+      },
+      {
+        "_id": 2,
+        "INPUT": "2\n3\n2 3 2\n3\n3 2 1",
+        "OUTPUT": "Line #1: A BC AB CB\nLine #2: AB CA BA"
+      }
+    ],
+    "key": 323
+  }
+}

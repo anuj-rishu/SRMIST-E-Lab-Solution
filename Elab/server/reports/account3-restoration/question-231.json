@@ -1,0 +1,38 @@
+{
+  "sequenceId": 231,
+  "Q_ID": "DS_REGULAR_SET1_527",
+  "questionData": {
+    "COMPLEXITY": [
+      6,
+      1050,
+      148
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "while(l<=r)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Problem Description\n\nThe \"Mystery Incorporated\" once went for an investigation. Since Scooby and Shaggy always create havoc during investigation, Velma decided to give them a question so as to keep them busy.\nVelma gave them a tree consisting of N nodes, rooted at node 1 with a number in each node, and asked them several queries. Each query was of the form u l and they had to find the sum of values of all nodes situated at a depth l and were in the subtree of u.\nSince Scooby and Shaggy are dumb, they need your help in solving this problem.\n\n\nConstraints\n\n * 1≤T≤5,1≤N,Q≤1000, 1≤ai≤106in 35% of test cases.\n * 1≤T≤10,1≤N,Q≤105, 1≤ai≤106in 65% of test cases.\n\n\nInput Format\n\nThe first line will contain the number of test cases T.\n\nThe first line of each test case will contain two integers N and Q(1 ≤ N, Q ≤ 100,000) - the number of nodes and the number of queries.\n\nThe second line of each test case will contain N integers a1, a2, ..., aN, where ai (1 ≤ ai≤ 10,00,000) is the value stored at the ithnode. The next N-1lines of each test case will contain two integers u and v, meaning that there is an edge connecting u and v.The next Q lines contains the queries each of the form u and l.\n\n\nOutput Format\n\nFor each query in every test case, print the answer to the query on a single line.",
+    "SEQ_ID": 527,
+    "SESSION_ID": 14,
+    "SESSION_NAME": "Linked List",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "1\n6 5\n1 2 3 4 5 6\n1 2\n2 3\n2 6\n1 4\n4 5\n1 1\n1 3\n2 1\n5 3\n2 3",
+        "OUTPUT": "1\n14\n0\n5\n9"
+      },
+      {
+        "_id": 2,
+        "INPUT": "1\n6 5\n11 12 13 14 15 16\n1 1\n2 3\n2 6\n1 4\n4 1\n1 1\n1 3\n2 1\n5 3\n2 1",
+        "OUTPUT": "0\n28\n0\n0\n0"
+      }
+    ],
+    "key": 527
+  }
+}

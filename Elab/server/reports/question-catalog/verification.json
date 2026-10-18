@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-18T07:08:31.720Z",
+  "catalogEntries": 437,
+  "validEmbeddings": 437,
+  "accounts": [
+    {
+      "account": 1,
+      "checked": 300,
+      "matched": 252,
+      "unlinkedBlocked": 48
+    },
+    {
+      "account": 2,
+      "checked": 300,
+      "matched": 269,
+      "unlinkedBlocked": 31
+    }
+  ],
+  "embeddingCalls": 0,
+  "problems": []
+}

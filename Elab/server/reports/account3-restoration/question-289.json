@@ -1,0 +1,38 @@
+{
+  "sequenceId": 289,
+  "Q_ID": "DS_REGULAR_SET1_446",
+  "questionData": {
+    "COMPLEXITY": [
+      5,
+      250,
+      35
+    ],
+    "COURSE_NAME": "DS",
+    "DEFAULT_CODE": 0,
+    "LEVEL": 3,
+    "MANDATORY": [
+      "for(i=0;i<sys;i++)"
+    ],
+    "MODE": "REGULAR",
+    "Q_DESC": "Question description\n\nPradeep and Chintu are working on different projects both with equal priority. They both need to run some batches of processes. A batch has processes which need some systems to run them irrespective of the number of process running on each dependent system. If a batch runs then the dependent systems are occupied by its processes. No system can run processes from different projects and thus a system can process only chintu's processes or pradeep's processes. Their manager being a stylo creep has allowed pradeep to run his batches. Chintu felt offended and complained the CTO directly due to which the manager came up with a condition that if chintu can increase the number of processes running in total by replacing some or all of pradeeps processes then only he can run his batches. Chintu wants to maximize the total processes running in order to show the manager his skills. Help him complete his task.\n\nNote:\n\nA system can run any number of process from multiple batches at the same time but only of Chintu or of Pradeep.\n\nPradeep's processes are running on some or all systems. Now, chintu has to run his batches of processes inorder to increase the number of running processes across all systems. A batch of chintu either runs all its processes or doesn't run any of them.\n\nIf Chintu has replaced a system with his own processes then another batch of him can run its processes on that system.\n\nA batch needs 's' systems and runs 'p' processes overall, in any manner.\n\nConstraints:\n\n1<=n<=100\n\n0<=Si<70\n\n0<=b<100\n\n1<=p<=50\n\nInput Format:\n\nThe first line contains the total number of systems - 'n', the next line contains 'n' space separated integers - 'Si', denoting the number of pradeep's processes running on ith system. Next line contains an integer - 'b' denoting the number of batches Chintu has. This is followed by each line containing space separated integers where the first integer is - 's', number of systems the ith batch needs followed by 's' integers denoting the system numbers and then the number of processes - 'p', the batch needs to run.\n\nOutput Format:\n\nThe increase in number of processes Chintu can put in by replacing some of all of pradeeps processes from some or all systems.",
+    "SEQ_ID": 446,
+    "SESSION_ID": 19,
+    "SESSION_NAME": "Graph",
+    "TAGS": [
+      "Data Structures"
+    ],
+    "TESTCASES": [
+      {
+        "_id": 1,
+        "INPUT": "4\n1 7 8 9\n2\n3 1 2 3 15\n2 3 4 11",
+        "OUTPUT": "1"
+      },
+      {
+        "_id": 2,
+        "INPUT": "4\n3 1 5 2\n3\n2 1 2 1\n2 2 3 7\n1 4 3",
+        "OUTPUT": "2"
+      }
+    ],
+    "key": 446
+  }
+}
