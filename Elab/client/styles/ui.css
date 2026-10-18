@@ -1,0 +1,98 @@
+.feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13px;
+  line-height: 1.7;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+.feedback-error {
+  background: #3b202844;
+  color: #f5a8af;
+  border: 1px solid #70363c66;
+}
+.feedback-success {
+  background: #173c2c66;
+  color: #8de0b6;
+  border: 1px solid #33684666;
+}
+.feedback > svg {
+  margin-top: 1px;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-enter {
+  animation: enter 0.3s ease-out;
+}
+.skip-link {
+  position: fixed;
+  left: 10px;
+  top: -60px;
+  padding: 12px;
+  background: #25448a;
+  z-index: 100;
+  border-radius: 7px;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+.skeleton {
+  display: block;
+  max-width: 100%;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #242a36;
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+}
+.skeleton-circle {
+  border-radius: 50%;
+}
+.skeleton-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.skeleton-course-title {
+  margin-block: 12px 8px;
+}
+.skeleton-profile-name {
+  width: 240px;
+}
+.skeleton-section-gap {
+  height: 16px;
+}
+.skeleton-sidebar-links {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+.button-loading {
+  opacity: 0.65;
+}
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
